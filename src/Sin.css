@@ -1,0 +1,168 @@
+body{
+    color: black;
+}
+.form_D{
+    min-width: 100vw;
+    min-height: 100vh;
+    background: chartreuse;
+    display: flex;
+}
+#left_{
+    width: 50%;
+    background: url(./wesnap/social.jpg);
+    background-size: cover;
+    background-blend-mode:darken;
+
+}
+#right_{
+    width: 50%;
+    background: var(--primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3%;
+}
+#right_ h1{
+    color: white;
+}
+#right_ form{
+    background: inherit;
+    width: 70%;
+    padding: 3%;
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    position: relative;
+    z-index: 0;
+}
+#right_ form::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    filter: blur(1px);
+    border-radius: 20px;
+    box-shadow: inset 0 0 0 200px rgba(255,255,255,0.1);
+}
+#right_ form div{  
+    min-width: 90%;
+}
+#right_ form input{
+    width: 100%;
+    height: 40px;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    margin: 5px;
+    background:rgba(255, 255, 255, 1);
+    color: black;
+}
+input:focus{
+    outline: none;
+    background: white;
+}
+#right_ form input[type=checkbox]{
+    width: 10px;
+    cursor: pointer;
+}
+#Condition{
+    display: flex;
+    align-items: center;
+}
+.form_D a{
+    color: blue;
+    cursor: pointer;
+}
+#right_ form input[type=submit]{
+    background: var(--blue);
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#right_ form input[type=submit]:hover{
+    background: blue;
+}
+form div{
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-flow: row-reverse;
+}
+.Exp{
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    /* top: 50%;
+    right: 5%;
+    transform: translate(50% 50%); */
+    margin-right: 5%;
+    cursor: pointer;
+}
+#right_ p{
+    background: inherit;
+    /* filter: blur(1px); */
+    padding: 15px;
+    margin: 10px;
+    
+    position: relative;
+    z-index: 1;
+}
+#right_ p::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, .5);
+    top: 0;
+    left: 0;
+    z-index: -1;
+    filter: blur(1px);
+    border-radius: 5px;
+}
+#right_ p a{
+    background: var(--blue);
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+}
+
+@media screen and (max-width: 900px){
+    #left_{
+        display: none;
+    }
+    #right_{
+        width: 100vw;
+    }
+}
+
+@media screen and (max-width: 500px){
+    #left_{
+        display: none;
+    }
+    #right_{
+        width: 100vw;
+    }
+    #right_ form{
+        width: 100%;
+    }
+    #right_ div{
+        height: 70px;
+    }
+    #right_ form input[type=checkbox]{
+        width: 15px;
+        height: 15px;
+    }
+    #right_ form input{
+        height: 50px;
+    }
+}
